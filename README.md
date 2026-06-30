@@ -1,8 +1,10 @@
 # FlatBuddy
 
-FlatBuddy is a local-first student housing marketplace for tenants and owners. It runs entirely on your machine with local Postgres, local image uploads, JWT auth, Prisma, Express, Socket.io, React, Vite, Tailwind, and OpenStreetMap tiles.
+FlatBuddy is a student housing marketplace for tenants and owners. It combines listings search, map-based discovery, favorites, conversations, and appointment handling in one full-stack app.
 
-No paid services are used. Everything runs locally.
+## Project Overview
+
+FlatBuddy is built with a React frontend, an Express + TypeScript backend, Prisma, PostgreSQL, and Socket.io. It supports property discovery across campus areas, owner-managed listings, real-time messaging, and appointment workflows.
 
 ## Features
 
@@ -10,11 +12,11 @@ No paid services are used. Everything runs locally.
 - Listings search with rent, city, bedroom, campus, amenities, and distance filters
 - Distance calculation from fixed campus centers using Haversine
 - Map view powered by React Leaflet and OpenStreetMap tiles
-- Favorites / saved listings
+- Favorites and saved listings
 - Real-time conversations with typing indicators
 - Appointment requests with owner confirm/decline and tenant cancel
 - Owner dashboard for listing management and image uploads
-- Local filesystem uploads stored under `server/uploads`
+- File uploads stored under `server/uploads`
 - Prisma + PostgreSQL data model with seed data
 
 ## Tech Stack
@@ -43,7 +45,7 @@ flatbuddy/
     src/
 ```
 
-## Local Setup
+## Setup
 
 1. Start Postgres:
 
@@ -58,7 +60,7 @@ cd server
 npm install
 ```
 
-3. Create a local environment file:
+3. Create the backend environment file:
 
 ```bash
 cp .env.example .env
@@ -97,15 +99,7 @@ npm run dev
 
 ## Demo Accounts
 
-All demo accounts use the password `Password123!`.
-
-- Admin: `admin@flatbuddy.local`
-- Owner: `maya@flatbuddy.local`
-- Owner: `jordan@flatbuddy.local`
-- Tenant: `avery@flatbuddy.local`
-- Tenant: `noah@flatbuddy.local`
-- Tenant: `sofia@flatbuddy.local`
-- Tenant: `ethan@flatbuddy.local`
+The seed data includes demo admin, owner, and tenant accounts with the shared password `Password123!`.
 
 ## API Overview
 
@@ -167,11 +161,11 @@ Listings are matched against fixed campus center coordinates for:
 - Columbia
 - Boston University
 
-Distance is computed locally with the Haversine formula. No geocoding APIs are used.
+Distance is computed with the Haversine formula. No geocoding APIs are used.
 
 ## Uploads
 
-Images are stored locally in `server/uploads` and served from `/uploads`.
+Images are stored in `server/uploads` and served from `/uploads`.
 
 Allowed file types:
 
@@ -196,7 +190,6 @@ npm test
 ## Troubleshooting
 
 - If Prisma reports `DATABASE_URL` missing, copy `server/.env.example` to `server/.env`.
-- If `docker compose up -d` fails, make sure Docker Desktop is actually running.
+- If `docker compose up -d` fails, make sure Docker Desktop is running.
 - If Leaflet map tiles do not appear, confirm the browser has internet access for OpenStreetMap tiles.
 - If uploaded images do not show, check that the backend is running on port `4000` and that the file exists in `server/uploads`.
-
