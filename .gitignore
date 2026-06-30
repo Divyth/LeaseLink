@@ -1,0 +1,15 @@
+node_modules
+dist
+.env
+.DS_Store
+.pgdata
+.pgdata/
+.pglog
+coverage
+server/node_modules
+client/node_modules
+server/dist
+client/dist
+server/uploads/*
+!server/uploads/.gitkeep
+*.log

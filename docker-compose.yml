@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: flatbuddy-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: flatbuddy
+      POSTGRES_USER: flatbuddy
+      POSTGRES_PASSWORD: flatbuddy
+    ports:
+      - "5432:5432"
+    volumes:
+      - flatbuddy_pgdata:/var/lib/postgresql/data
+
+volumes:
+  flatbuddy_pgdata:
+
