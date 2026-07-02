@@ -30,16 +30,4 @@ leaseLink/
   screenshots/
 ```
 
-## Notes
 
-- The app includes demo data for showcasing core flows.
-- Images are stored in the server upload folder.
-- Messages are delivered in real time and persisted to the database.
-
-## Quick Start
-
-```bash
-docker compose up -d
-cd server && npm install && npm run dev
-cd ../client && npm install && npm run dev
-```
