@@ -1,4 +1,4 @@
-# FlatBuddy
+# LeaseLink
 
 FlatBuddy is a student housing marketplace that connects tenants and owners with listings, search filters, map discovery, favorites, chat, and appointment handling.
 
@@ -24,7 +24,7 @@ FlatBuddy is a student housing marketplace that connects tenants and owners with
 ## Project Structure
 
 ```text
-flatbuddy/
+leaseLink/
   client/
   server/
   screenshots/
