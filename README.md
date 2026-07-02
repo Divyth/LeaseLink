@@ -1,6 +1,6 @@
 # LeaseLink
 
-FlatBuddy is a student housing marketplace that connects tenants and owners with listings, search filters, map discovery, favorites, chat, and appointment handling.
+LeaseLink is a student housing marketplace that connects tenants and owners with listings, search filters, map discovery, favorites, chat, and appointment handling.
 
 ## Highlights
 
